@@ -1,4 +1,7 @@
 module.exports = function(source) {
-  result = source + "hiiiiiiii";
+  var path = require('path');
+
+  result = source.replace(/\+include\s*['"](.*?)['"]/g, function(partialPath){ return path.resolve(partialPath); });
+
   return "module.exports = " + JSON.stringify(result) + ";";
 }
