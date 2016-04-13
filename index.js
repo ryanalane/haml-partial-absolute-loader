@@ -1,7 +1,11 @@
 module.exports = function(source) {
   var path = require('path');
 
-  result = source.replace(/\+include\s*['"](.*?)['"]/g, function(partialPath){ return path.resolve(partialPath); });
+  var context = this.context;
+  result = source.replace(/\+include\s*['"](.*?)['"]/g, function(match, partialPath){
+    // Turn path into absolute path
+    return match.replace(partialPath, path.resolve(context, partialPath));
+  });
 
-  return "module.exports = " + JSON.stringify(result) + ";";
+  return result;
 }
