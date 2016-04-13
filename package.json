@@ -1,0 +1,13 @@
+{
+  "name": "haml-partial-absolute-loader",
+  "version": "0.1.0",
+  "description": "a webpack loader that transforms '+include' directive paths used in .haml partials into absolute paths",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanalane/haml-partial-absolute-loader.git"
+  },
+  "author": "Ryan Lane",
+  "license": "MIT",
+  "homepage": "https://github.com/ryanalane/haml-partial-absolute-loader",
+}
