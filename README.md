@@ -1,0 +1,1 @@
+# haml-partial-absolute-loader
